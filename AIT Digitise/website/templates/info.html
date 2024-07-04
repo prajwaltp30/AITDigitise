@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Health Information Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin:500px;
+                background-color: #f2f2f2;
+            }
+            .form-container {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 500px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center the form horizontally */
+            }
+            h2 {
+                margin-bottom: 20px;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input[type="text"],
+            input[type="number"],
+            select {
+                width: calc(100% - 22px); /* Adjusted width to accommodate borders */
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type="submit"] {
+                width: calc(100% - 22px); /* Adjusted width to accommodate borders */
+                padding: 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+        </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Health Information Form</h2>
+        <form action="/submit_health_info" method="post">
+            <label for="name">email</label>
+            <input type="text" id="name" name="name">
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="0" max="150">
+
+            <label for="diabetes">Diabetes</label>
+            <select id="diabetes" name="diabetes">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="famhistory">Family History</label>
+            <select id="famhistory" name="famhistory">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="smoking">Smoking</label>
+            <select id="smoking" name="smoking">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="obesity">Obesity</label>
+            <select id="obesity" name="obesity">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="alcohol">Alcohol Use</label>
+            <select id="alcohol" name="alcohol">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="exercise">Exercise (hours per week)</label>
+            <input type="number" id="exercise" name="exercise" step="0.1">
+
+            <label for="diet">Diet</label>
+            <select id="diet" name="diet">
+                <option value="Poor">Poor</option>
+                <option value="Average">Average</option>
+                <option value="Healthy">Healthy</option>
+            </select>
+
+            <label for="prevheart">Previous Heart Disease</label>
+            <select id="prevheart" name="prevheart">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="meduse">Medication Use</label>
+            <select id="meduse" name="meduse">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="bmi">BMI</label>
+            <input type="number" id="bmi" name="bmi" step="0.1">
+
+            <label for="phyactivity">Physical Activity (hours per week)</label>
+            <input type="number" id="phyactivity" name="phyactivity" step="0.1">
+
+            <label for="sleep">Sleep (hours per night)</label>
+            <input type="number" id="sleep" name="sleep" step="0.1">
+
+            <label for="bp1">Blood Pressure (Systolic)</label>
+            <input type="number" id="bp1" name="bp1" step="1">
+
+            <label for="bp2">Blood Pressure (Diastolic)</label>
+            <input type="number" id="bp2" name="bp2" step="1">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
